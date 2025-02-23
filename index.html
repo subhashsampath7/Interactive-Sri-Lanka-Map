@@ -85,15 +85,60 @@
         margin: 10px 0;
     }
 
+    img {
+  max-width: 100%;
+  height: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  padding: 15px;
+}
+
+
+
+    /* Mobile devices */
+@media screen and (max-width: 768px) {
+  .map-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .map-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+
     </style>
 </head>
 <body>
+    <div class="container-fluid">
+      
     <div class="container">
         <div class="map-container">
             <h1 class="text-center mb-4">Interactive Sri Lanka Map</h1>
             <div id="chartdiv"></div>
         </div>
     </div>
+
+        </div>
 
     <script>
     const districtData = {
